@@ -1,0 +1,49 @@
+﻿//----------------------------------------------------------------------------
+// MIT License
+// 
+// Copyright (c) 2017 SSASQueryAnalyzer
+// 
+// Permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the "Software"), to deal
+// in the Software without restriction, including without limitation the rights
+// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// copies of the Software, and to permit persons to whom the Software is
+// furnished to do so, subject to the following conditions:
+// 
+// The above copyright notice and this permission notice shall be included in all
+// copies or substantial portions of the Software.
+// 
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+// SOFTWARE.
+//----------------------------------------------------------------------------
+
+namespace SSASQueryAnalyzer.Client.Common.Infrastructure.Server
+{
+    using System;
+    using System.Data;
+
+    public class QueryResult
+    {
+        public static readonly string TableName = "QueryResult";
+
+        public static DataTable CreateFromDataSet(DataSet dataset)
+        {
+            #region Argument exception
+
+            if (dataset == null)
+                throw new ArgumentNullException("dataset");
+
+            #endregion
+
+            if (dataset.Tables.Contains(TableName, "Common"))
+                return dataset.Tables[TableName, "Common"].Copy();
+
+            return null;
+        }
+    }
+}

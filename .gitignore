@@ -1,0 +1,16 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+*.suo
+*.user
+/packages/
+/SSASQueryAnalyzer.Server/bin
+/SSASQueryAnalyzer.Server/obj
+/SSASQueryAnalyzer.Client.Common/bin
+/SSASQueryAnalyzer.Client.Common/obj
+/SSASQueryAnalyzer.Client.SSMS.VSPackage/obj
+/SSASQueryAnalyzer.Client.SSMS.VSPackage/bin
+/SSASQueryAnalyzer.Client.Common.Reporting/bin
+/SSASQueryAnalyzer.Client.Common.Reporting/obj

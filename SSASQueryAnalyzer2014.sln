@@ -1,0 +1,68 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SSASQueryAnalyzer.Server2014", "SSASQueryAnalyzer.Server\SSASQueryAnalyzer.Server2014.csproj", "{B58CB85D-CAC9-4FCF-B946-1B209C938045}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4F16C327-D986-454C-B8F9-670445E1D2D0}"
+	ProjectSection(SolutionItems) = preProject
+		_PostBuild_Client.SSMS.VSPackage.ps1 = _PostBuild_Client.SSMS.VSPackage.ps1
+		_PostBuild_Server.ps1 = _PostBuild_Server.ps1
+		ASQA-Batch-Recursive.ps1 = ASQA-Batch-Recursive.ps1
+		ASQA-CreatePdF-Recursive.ps1 = ASQA-CreatePdF-Recursive.ps1
+		ASQA-Install.ps1 = ASQA-Install.ps1
+		deafult.licenseheader = deafult.licenseheader
+		LICENSE = LICENSE
+		SharedAssemblyInfo.cs = SharedAssemblyInfo.cs
+		SSASQueryAnalyzerAnalyzeBatch.ps1 = SSASQueryAnalyzerAnalyzeBatch.ps1
+		SSASQueryAnalyzerDatabaseBatchAnalysisCreateTemporaryTable.sql = SSASQueryAnalyzerDatabaseBatchAnalysisCreateTemporaryTable.sql
+		SSASQueryAnalyzerDatabaseBatchCalculateCommonAggregationsRead.sql = SSASQueryAnalyzerDatabaseBatchCalculateCommonAggregationsRead.sql
+		SSASQueryAnalyzerDatabaseBatchCalculateCommonCachesRead.sql = SSASQueryAnalyzerDatabaseBatchCalculateCommonCachesRead.sql
+		SSASQueryAnalyzerDatabaseBatchCalculateCommonEnginePerformance.sql = SSASQueryAnalyzerDatabaseBatchCalculateCommonEnginePerformance.sql
+		SSASQueryAnalyzerDatabaseBatchCalculateCommonPartitionsRead.sql = SSASQueryAnalyzerDatabaseBatchCalculateCommonPartitionsRead.sql
+		SSASQueryAnalyzerDatabaseInstallBody.sql = SSASQueryAnalyzerDatabaseInstallBody.sql
+		SSASQueryAnalyzerDatabaseInstallHeaderDatabaseEngineTypeSqlAzureDatabase.sql = SSASQueryAnalyzerDatabaseInstallHeaderDatabaseEngineTypeSqlAzureDatabase.sql
+		SSASQueryAnalyzerDatabaseInstallHeaderDatabaseEngineTypeStandalone.sql = SSASQueryAnalyzerDatabaseInstallHeaderDatabaseEngineTypeStandalone.sql
+		SSASQueryAnalyzerDatabaseUninstallBody.sql = SSASQueryAnalyzerDatabaseUninstallBody.sql
+		SSASQueryAnalyzerDatabaseUninstallHeaderDatabaseEngineTypeSqlAzureDatabase.sql = SSASQueryAnalyzerDatabaseUninstallHeaderDatabaseEngineTypeSqlAzureDatabase.sql
+		SSASQueryAnalyzerDatabaseUninstallHeaderDatabaseEngineTypeStandalone.sql = SSASQueryAnalyzerDatabaseUninstallHeaderDatabaseEngineTypeStandalone.sql
+		SSASQueryAnalyzerInfo.txt = SSASQueryAnalyzerInfo.txt
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SSASQueryAnalyzer.Client.Common2014", "SSASQueryAnalyzer.Client.Common\SSASQueryAnalyzer.Client.Common2014.csproj", "{5F031DFB-4837-429C-9432-BDFF527FB394}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SSASQueryAnalyzer.Client.SSMS.VSPackage120", "SSASQueryAnalyzer.Client.SSMS.VSPackage\SSASQueryAnalyzer.Client.SSMS.VSPackage120.csproj", "{934A3081-C66A-4EFD-AFBB-EC7CFCA2C325}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SSASQueryAnalyzer.Client.Common.Reporting2014", "SSASQueryAnalyzer.Client.Common.Reporting\SSASQueryAnalyzer.Client.Common.Reporting2014.csproj", "{BBE0E128-3FE4-419B-9353-75B9DA3A0EB3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B58CB85D-CAC9-4FCF-B946-1B209C938045}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B58CB85D-CAC9-4FCF-B946-1B209C938045}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B58CB85D-CAC9-4FCF-B946-1B209C938045}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B58CB85D-CAC9-4FCF-B946-1B209C938045}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F031DFB-4837-429C-9432-BDFF527FB394}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F031DFB-4837-429C-9432-BDFF527FB394}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F031DFB-4837-429C-9432-BDFF527FB394}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F031DFB-4837-429C-9432-BDFF527FB394}.Release|Any CPU.Build.0 = Release|Any CPU
+		{934A3081-C66A-4EFD-AFBB-EC7CFCA2C325}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{934A3081-C66A-4EFD-AFBB-EC7CFCA2C325}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{934A3081-C66A-4EFD-AFBB-EC7CFCA2C325}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{934A3081-C66A-4EFD-AFBB-EC7CFCA2C325}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBE0E128-3FE4-419B-9353-75B9DA3A0EB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBE0E128-3FE4-419B-9353-75B9DA3A0EB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBE0E128-3FE4-419B-9353-75B9DA3A0EB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBE0E128-3FE4-419B-9353-75B9DA3A0EB3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DC58052C-81BA-4462-90D9-CDFE1D9CCB4E}
+	EndGlobalSection
+EndGlobal

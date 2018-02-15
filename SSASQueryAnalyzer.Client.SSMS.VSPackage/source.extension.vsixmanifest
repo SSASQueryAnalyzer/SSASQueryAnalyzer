@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
+  <Metadata>
+    <Identity Id="SSASQueryAnalyzer.Client.SSMS.VSPackage.AlbertoSpelta.75969442-6ece-4edd-b259-ab5a1b93dd71" Version="1.0" Language="en-US" Publisher="AlbertoSpelta" />
+    <DisplayName>SSASQueryAnalyzer</DisplayName>
+    <Description>Troubleshooting MDX queries has never been so easy</Description>
+    <Tags>Troubleshoot, MDX, SSAS, Analysis Services</Tags>
+  </Metadata>
+  <Installation>
+    <InstallationTarget Id="Microsoft.VisualStudio.IntegratedShell" Version="[14.0]" />
+  </Installation>
+  <Dependencies>
+    <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.5,)" />
+  </Dependencies>
+</PackageManifest>

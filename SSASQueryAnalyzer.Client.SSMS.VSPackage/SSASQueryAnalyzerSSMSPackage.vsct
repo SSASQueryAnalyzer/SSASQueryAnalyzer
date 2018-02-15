@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <Extern href="stdidcmd.h" />
+  <Extern href="vsshlids.h" />
+
+  <Commands package="guidAsqaPackage">
+
+    <Menus>
+      <Menu guid="guidAsqaPackageCmdSet" id="cmdidAsqaToolbar" type="Toolbar">
+        <CommandFlag>DefaultDocked</CommandFlag>
+        <Strings>
+          <ButtonText>Analysis Services Query Analyzer</ButtonText>
+          <CommandName>Analysis Services Query Analyzer</CommandName>
+        </Strings>
+      </Menu>
+    </Menus>
+
+    <Groups>
+      
+      <Group guid="guidAsqaPackageCmdSet" id="cmdidAsqaToolbarGroup" priority="0x0000">
+        <Parent guid="guidAsqaPackageCmdSet" id="cmdidAsqaToolbar" />
+      </Group>
+       
+      <Group guid="guidAsqaPackageCmdSet" id="cmdidAsqaContextMenu" priority="0x0401">
+        <Parent guid="guidSSMSMdxFileEditorContext" id="cmdidSSMSMdxFileEditorContext" />
+      </Group>
+    
+    </Groups>
+
+    <Buttons>
+
+      <Button guid="guidAsqaPackageCmdSet" id="cmdidAsqaToolbarCommandShowHelper" priority="0x0150" type="Button">
+        <Parent guid="guidSHLMainMenu" id="IDG_VS_WNDO_OTRWNDWS1" />
+        <Icon guid="guidImages" id="bmpAsqaShowHelper" />
+        <Strings>
+          <ButtonText>ASQA Helper</ButtonText>
+          <ToolTipText>ASQA Helper</ToolTipText>
+        </Strings>
+      </Button>
+
+      <Button guid="guidAsqaPackageCmdSet" id="cmdidAsqaToolbarCommandShowHelper" priority="0x0100" type="Button">
+        <Parent guid="guidAsqaPackageCmdSet" id="cmdidAsqaToolbarGroup" />
+        <Icon guid="guidImages" id="bmpAsqaShowHelper" />
+        <CommandFlag>DefaultDisabled</CommandFlag>
+        <Strings>
+          <ButtonText>Show ASQA Helper</ButtonText>
+          <ToolTipText>Show ASQA Helper</ToolTipText>
+        </Strings>
+      </Button>
+
+      <Button guid="guidAsqaPackageCmdSet" id="cmdidAsqaToolbarCommandNewQuery" priority="0x0110" type="Button">
+        <Parent guid="guidAsqaPackageCmdSet" id="cmdidAsqaToolbarGroup" />
+        <Icon guid="guidImages" id="bmpAsqaNewQuery" />
+        <CommandFlag>DefaultDisabled</CommandFlag>
+        <Strings>
+          <ButtonText>New ASQA Query</ButtonText>
+          <ToolTipText>New ASQA Query</ToolTipText>
+        </Strings>
+      </Button>
+
+      <Button guid="guidAsqaPackageCmdSet" id="cmdidAsqaToolbarCommandExecuteLiveAnalysis" priority="0x0120" type="Button">
+        <Parent guid="guidAsqaPackageCmdSet" id="cmdidAsqaToolbarGroup" />
+        <Icon guid="guidImages" id="bmpAsqaExecuteLiveAnalysis" />
+        <CommandFlag>DefaultDisabled</CommandFlag>
+        <Strings>
+          <ButtonText>Execute ASQA Live Mode Analysis</ButtonText>
+          <ToolTipText>Execute ASQA Live Mode Analysis</ToolTipText>
+        </Strings>
+      </Button>
+
+      <Button guid="guidAsqaPackageCmdSet" id="cmdidAsqaToolbarCommandExecuteBatchAnalysis" priority="0x0130" type="Button">
+        <Parent guid="guidAsqaPackageCmdSet" id="cmdidAsqaToolbarGroup" />
+        <Icon guid="guidImages" id="bmpAsqaExecuteBatchAnalysis" />
+        <CommandFlag>DefaultDisabled</CommandFlag>
+        <Strings>
+          <ButtonText>Execute ASQA Batch Mode Analysis</ButtonText>
+          <ToolTipText>Execute ASQA Batch Mode Analysis</ToolTipText>
+        </Strings>
+      </Button>
+
+      <Button guid="guidAsqaPackageCmdSet" id="cmdidAsqaToolbarCommandCreatePowershellScript" priority="0x0140" type="Button">
+        <Parent guid="guidAsqaPackageCmdSet" id="cmdidAsqaToolbarGroup" />
+        <Icon guid="guidImages" id="bmpAsqaCreatePowershellScript" />
+        <CommandFlag>DefaultDisabled</CommandFlag>
+        <Strings>
+          <ButtonText>Create ASQA Powershell Script</ButtonText>
+          <ToolTipText>Create ASQA Powershell Script</ToolTipText>
+        </Strings>
+      </Button>
+
+      <Button guid="guidAsqaPackageCmdSet" id="cmdidAsqaToolbarCommandFormatMDX" priority="0x0150" type="Button">
+        <Parent guid="guidAsqaPackageCmdSet" id="cmdidAsqaToolbarGroup" />
+        <Icon guid="guidImages" id="bmpAsqaFormatMDX" />
+        <CommandFlag>DefaultDisabled</CommandFlag>
+        <Strings>
+          <ButtonText>Format MDX query</ButtonText>
+          <ToolTipText>Format MDX query</ToolTipText>
+        </Strings>
+      </Button>
+      
+      <Button guid="guidAsqaPackageCmdSet" id="cmdidAsqaToolbarCommandCreatePdfReport" priority="0x0160" type="Button">
+        <Parent guid="guidAsqaPackageCmdSet" id="cmdidAsqaToolbarGroup" />
+        <Icon guid="guidImages" id="bmpAsqaCreatePdfReport" />
+        <CommandFlag>DefaultDisabled</CommandFlag>
+        <Strings>
+          <ButtonText>Create ASQA Pdf Report</ButtonText>
+          <ToolTipText>Create ASQA Pdf Report</ToolTipText>
+        </Strings>
+      </Button>
+
+      <Button guid="guidAsqaPackageCmdSet" id="cmdidAsqaContextMenuCommandShowHelper" priority="0x1000" type="Button">
+        <Parent guid="guidAsqaPackageCmdSet" id="cmdidAsqaContextMenu" />
+        <Icon guid="guidImages" id="bmpAsqaShowHelper" />
+        <CommandFlag>DefaultDisabled</CommandFlag>
+        <Strings>
+          <ButtonText>Show ASQA Helper</ButtonText>
+          <ToolTipText>Show ASQA Helper</ToolTipText>
+        </Strings>
+      </Button>
+        
+      <Button guid="guidAsqaPackageCmdSet" id="cmdidAsqaContextMenuCommandExecuteLiveAnalysis" priority="0x1020" type="Button">
+        <Parent guid="guidAsqaPackageCmdSet" id="cmdidAsqaContextMenu" />
+        <Icon guid="guidImages" id="bmpAsqaExecuteLiveAnalysis" />
+        <CommandFlag>DefaultDisabled</CommandFlag>
+        <Strings>
+          <ButtonText>Execute ASQA Live Mode Analysis</ButtonText>
+          <ToolTipText>Execute ASQA Live Mode Analysis</ToolTipText>
+        </Strings>
+      </Button>
+      
+      <Button guid="guidAsqaPackageCmdSet" id="cmdidAsqaContextMenuCommandExecuteBatchAnalysis" priority="0x1030" type="Button">
+        <Parent guid="guidAsqaPackageCmdSet" id="cmdidAsqaContextMenu" />
+        <Icon guid="guidImages" id="bmpAsqaExecuteBatchAnalysis" />
+        <CommandFlag>DefaultDisabled</CommandFlag>
+        <Strings>
+          <ButtonText>Execute ASQA Batch Mode Analysis</ButtonText>
+          <ToolTipText>Execute ASQA Batch Mode Analysis</ToolTipText>
+        </Strings>
+      </Button>    
+
+      <Button guid="guidAsqaPackageCmdSet" id="cmdidAsqaContextMenuCommandCreatePowershellScript" priority="0x1040" type="Button">
+        <Parent guid="guidAsqaPackageCmdSet" id="cmdidAsqaContextMenu" />
+        <Icon guid="guidImages" id="bmpAsqaCreatePowershellScript" />
+        <CommandFlag>DefaultDisabled</CommandFlag>
+        <Strings>
+          <ButtonText>Create ASQA Powershell Script</ButtonText>
+          <ToolTipText>Create ASQA Powershell Script</ToolTipText>
+        </Strings>
+      </Button>
+
+      <Button guid="guidAsqaPackageCmdSet" id="cmdidAsqaContextMenuCommandFormatMDX" priority="0x1050" type="Button">
+        <Parent guid="guidAsqaPackageCmdSet" id="cmdidAsqaContextMenu" />
+        <Icon guid="guidImages" id="bmpAsqaFormatMDX" />
+        <CommandFlag>DefaultDisabled</CommandFlag>
+        <Strings>
+          <ButtonText>Format MDX query</ButtonText>
+          <ToolTipText>Format MDX query</ToolTipText>
+        </Strings>
+      </Button>
+      
+      <Button guid="guidAsqaPackageCmdSet" id="cmdidAsqaContextMenuCommandCreatePdfReport" priority="0x1060" type="Button">
+        <Parent guid="guidAsqaPackageCmdSet" id="cmdidAsqaContextMenu" />
+        <Icon guid="guidImages" id="bmpAsqaCreatePdfReport" />
+        <CommandFlag>DefaultDisabled</CommandFlag>
+        <Strings>
+          <ButtonText>Create ASQA Pdf Report</ButtonText>
+          <ToolTipText>Create ASQA Pdf Report</ToolTipText>
+        </Strings>
+      </Button>
+     
+    </Buttons>
+
+    <Bitmaps>
+      <Bitmap guid="guidImages" href="Resources\png\AsqaToolbarCommand.png" usedList="bmpAsqaShowHelper, bmpAsqaNewQuery, bmpAsqaExecuteLiveAnalysis, bmpAsqaExecuteBatchAnalysis, bmpAsqaCreatePowershellScript, bmpAsqaCreatePdfReport, bmpAsqaFormatMDX" />
+    </Bitmaps>
+
+  </Commands>
+
+  <Symbols>
+
+    <GuidSymbol name="guidAsqaPackage" value="{28672cc0-c8a7-4203-b4ce-d9c3e6216812}" />
+    
+    <GuidSymbol name="guidSSMSMdxFileEditorContext" value="{33f13ac3-80bb-4ecb-85bc-225435603a5e}">
+      <IDSymbol name="cmdidSSMSMdxFileEditorContext" value="0x0051"/>
+    </GuidSymbol>
+    
+    <GuidSymbol name="guidAsqaPackageCmdSet" value="{fef8b856-4329-4a0e-a03b-364c1d1bff24}">
+      
+      <IDSymbol name="cmdidAsqaToolbar" value="0x0010" />
+      <IDSymbol name="cmdidAsqaToolbarGroup" value="0x0050" />
+      <IDSymbol name="cmdidAsqaToolbarCommandShowHelper" value="0x0100" />
+      <IDSymbol name="cmdidAsqaToolbarCommandNewQuery" value="0x0110" />
+      <IDSymbol name="cmdidAsqaToolbarCommandExecuteLiveAnalysis" value="0x0120" />
+      <IDSymbol name="cmdidAsqaToolbarCommandExecuteBatchAnalysis" value="0x0130" />
+      <IDSymbol name="cmdidAsqaToolbarCommandCreatePowershellScript" value="0x0140" />
+      <IDSymbol name="cmdidAsqaToolbarCommandCreatePdfReport" value="0x0150" />
+      <IDSymbol name="cmdidAsqaToolbarCommandFormatMDX" value="0x0160" />
+
+      <IDSymbol name="cmdidAsqaContextMenu" value="0x0500" />
+      <IDSymbol name="cmdidAsqaContextMenuCommandShowHelper" value="0x1000" />
+      <IDSymbol name="cmdidAsqaContextMenuCommandExecuteLiveAnalysis" value="0x1020" />
+      <IDSymbol name="cmdidAsqaContextMenuCommandExecuteBatchAnalysis" value="0x1030" />
+      <IDSymbol name="cmdidAsqaContextMenuCommandCreatePowershellScript" value="0x1040" />
+      <IDSymbol name="cmdidAsqaContextMenuCommandCreatePdfReport" value="0x1050" />
+      <IDSymbol name="cmdidAsqaContextMenuCommandFormatMDX" value="0x1060" />
+
+    </GuidSymbol>
+
+    <GuidSymbol name="guidImages" value="{9077ced1-9ddd-4f0a-bf33-185a69352188}">
+      <IDSymbol name="bmpAsqaShowHelper" value="1" />
+      <IDSymbol name="bmpAsqaNewQuery" value="2" />
+      <IDSymbol name="bmpAsqaExecuteLiveAnalysis" value="3" />
+      <IDSymbol name="bmpAsqaExecuteBatchAnalysis" value="4" />
+      <IDSymbol name="bmpAsqaCreatePowershellScript" value="5" />
+      <IDSymbol name="bmpAsqaCreatePdfReport" value="6" />
+      <IDSymbol name="bmpAsqaFormatMDX" value="7" />
+    </GuidSymbol>
+
+  </Symbols>
+
+</CommandTable>

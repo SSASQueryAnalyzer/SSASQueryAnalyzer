@@ -1,0 +1,463 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5F031DFB-4837-429C-9432-BDFF527FB394}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SSASQueryAnalyzer.Client.Common</RootNamespace>
+    <AssemblyName>SSASQueryAnalyzer.Client.Common2017</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;SSASv11</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>..\SSASQueryAnalyzer.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AnalysisServices, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>True</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Microsoft SQL Server\130\SDK\Assemblies\Microsoft.AnalysisServices.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AnalysisServices.AdomdClient, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>True</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Microsoft.NET\ADOMD.NET\130\Microsoft.AnalysisServices.AdomdClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AnalysisServices.Core, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>True</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Microsoft SQL Server\130\SDK\Assemblies\Microsoft.AnalysisServices.Core.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks, Version=1.0.12.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions, Version=1.0.12.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions.Desktop, Version=1.0.168.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.Extensions.Desktop.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO, Version=2.6.10.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.1.1.10\lib\net40\System.IO.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net" />
+    <Reference Include="System.Runtime, Version=2.6.10.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.1.1.10\lib\net40\System.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks, Version=2.6.10.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.1.1.10\lib\net40\System.Threading.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\SharedAssemblyInfo.cs">
+      <Link>Properties\SharedAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\SSASQueryAnalyzer.Server\Infrastructure\ClearCacheMode.cs">
+      <Link>Infrastructure\ClearCacheMode.cs</Link>
+    </Compile>
+    <Compile Include="..\SSASQueryAnalyzer.Server\Infrastructure\ConfigurationType.cs">
+      <Link>Infrastructure\ConfigurationType.cs</Link>
+    </Compile>
+    <Compile Include="..\SSASQueryAnalyzer.Server\Infrastructure\ProcedureConfiguration.cs">
+      <Link>Infrastructure\ProcedureConfiguration.cs</Link>
+    </Compile>
+    <Compile Include="..\SSASQueryAnalyzer.Server\Infrastructure\ProcedureEvents.cs">
+      <Link>Infrastructure\ProcedureEvents.cs</Link>
+    </Compile>
+    <Compile Include="..\SSASQueryAnalyzer.Server\Infrastructure\ProcedureExecutionMode.cs">
+      <Link>Infrastructure\ProcedureExecutionMode.cs</Link>
+    </Compile>
+    <Compile Include="Infrastructure\AnalysisServices\AnalysisServicesHelper.cs" />
+    <Compile Include="Infrastructure\AnalysisServices\TraceEventClass.cs" />
+    <Compile Include="Infrastructure\AnalysisServices\TraceEventSubclass.cs" />
+    <Compile Include="Infrastructure\AnalyzerExecutionResultHelper.cs" />
+    <Compile Include="Infrastructure\AnalyzerStatistics.cs" />
+    <Compile Include="Infrastructure\Configuration\ResultPresenterConfiguration.cs" />
+    <Compile Include="Infrastructure\Server\AggregationsRead.cs" />
+    <Compile Include="Infrastructure\AnalyzerExecutionResult.cs" />
+    <Compile Include="Infrastructure\Server\CachesReadCollection.cs" />
+    <Compile Include="Infrastructure\Server\CachesRead.cs" />
+    <Compile Include="Infrastructure\Server\ProcedureEvent.cs" />
+    <Compile Include="Infrastructure\Server\ProcedureEventCollection.cs" />
+    <Compile Include="Infrastructure\Server\QueryResult.cs" />
+    <Compile Include="Infrastructure\Server\PartitionsReadCollection.cs" />
+    <Compile Include="Infrastructure\Server\EnginePerformance.cs" />
+    <Compile Include="Infrastructure\Server\AggregationsReadCollection.cs" />
+    <Compile Include="Infrastructure\Server\EnginePerformanceCollection.cs" />
+    <Compile Include="Infrastructure\Extension.cs" />
+    <Compile Include="Infrastructure\Server\PartitionsRead.cs" />
+    <Compile Include="Infrastructure\Server\Performance\PerformanceItemCollection.cs" />
+    <Compile Include="Infrastructure\Server\Performance\PerformanceItem.cs" />
+    <Compile Include="Infrastructure\Server\Performance\PerformanceItemCollectionList.cs" />
+    <Compile Include="Infrastructure\Server\Profiler\ProfilerItemCollectionList.cs" />
+    <Compile Include="Infrastructure\Server\Profiler\ProfilerItem.cs" />
+    <Compile Include="Infrastructure\Server\Profiler\ProfilerItemCollection.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.cs" />
+    <Compile Include="SSASQueryAnalyzerClient.cs" />
+    <Compile Include="Windows\Drawing\CustomColor.cs" />
+    <Compile Include="Windows\Forms\ResetTimelineZoomConfirmationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\ResetTimelineZoomConfirmationForm.Designer.cs">
+      <DependentUpon>ResetTimelineZoomConfirmationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Forms\TimelineThresholdLimitWarningForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\TimelineThresholdLimitWarningForm.Designer.cs">
+      <DependentUpon>TimelineThresholdLimitWarningForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Forms\ResetTraceEventsFilterConfirmationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\ResetTraceEventsFilterConfirmationForm.Designer.cs">
+      <DependentUpon>ResetTraceEventsFilterConfirmationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Forms\CustomComboBoxControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\CustomComboBoxControl.Designer.cs">
+      <DependentUpon>CustomComboBoxControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Forms\CustomDataGridViewControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\CustomDataGridViewControl.Designer.cs">
+      <DependentUpon>CustomDataGridViewControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Forms\CustomGaugeLabelControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\CustomGaugeLabelControl.Designer.cs">
+      <DependentUpon>CustomGaugeLabelControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Forms\CustomLabelControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\CustomLabelControl.Designer.cs">
+      <DependentUpon>CustomLabelControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Forms\CustomPanelControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\CustomPanelControl.Designer.cs">
+      <DependentUpon>CustomPanelControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Forms\CustomTabControlControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\CustomTabControlControl.Designer.cs">
+      <DependentUpon>CustomTabControlControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Forms\CustomTableLayoutPanelControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\CustomTableLayoutPanelControl.Designer.cs">
+      <DependentUpon>CustomTableLayoutPanelControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Forms\ResultPresenterAboutControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\ResultPresenterAboutControl.Designer.cs">
+      <DependentUpon>ResultPresenterAboutControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Forms\CustomErrorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\CustomErrorControl.Designer.cs">
+      <DependentUpon>CustomErrorControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Forms\ResultPresenterAnalyzerResultTimelineControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\ResultPresenterAnalyzerResultTimelineControl.Designer.cs">
+      <DependentUpon>ResultPresenterAnalyzerResultTimelineControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Forms\ResultPresenterExecutionInfoControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\ResultPresenterExecutionInfoControl.Designer.cs">
+      <DependentUpon>ResultPresenterExecutionInfoControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Forms\ResultPresenterAnalyzerResultMdxQueryTreeControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\ResultPresenterAnalyzerResultMdxQueryTreeControl.Designer.cs">
+      <DependentUpon>ResultPresenterAnalyzerResultMdxQueryTreeControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Forms\ResultPresenterAnalyzerResultDataRetrieveControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\ResultPresenterAnalyzerResultDataRetrieveControl.Designer.cs">
+      <DependentUpon>ResultPresenterAnalyzerResultDataRetrieveControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Forms\ResultPresenterAnalyzerResultEngineUsageControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\ResultPresenterAnalyzerResultEngineUsageControl.Designer.cs">
+      <DependentUpon>ResultPresenterAnalyzerResultEngineUsageControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Forms\ResultPresenterAnalyzerResultControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\ResultPresenterAnalyzerResultControl.Designer.cs">
+      <DependentUpon>ResultPresenterAnalyzerResultControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Forms\ResultPresenterAnalyzerResultPerformanceCounterControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\ResultPresenterAnalyzerResultPerformanceCounterControl.Designer.cs">
+      <DependentUpon>ResultPresenterAnalyzerResultPerformanceCounterControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Forms\ResultPresenterAnalyzerResultResourceUsageControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\ResultPresenterAnalyzerResultResourceUsageControl.Designer.cs">
+      <DependentUpon>ResultPresenterAnalyzerResultResourceUsageControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Forms\ResultPresenterControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\ResultPresenterControl.Designer.cs">
+      <DependentUpon>ResultPresenterControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Forms\ResultPresenterExecutionProgressControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\ResultPresenterExecutionProgressControl.Designer.cs">
+      <DependentUpon>ResultPresenterExecutionProgressControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Forms\ResultPresenterQueryResultControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\ResultPresenterQueryResultControl.Designer.cs">
+      <DependentUpon>ResultPresenterQueryResultControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Forms\ResultPresenterTraceEventsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\ResultPresenterTraceEventsControl.Designer.cs">
+      <DependentUpon>ResultPresenterTraceEventsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_OpenSource\BeTimvwFramework\Collections\Generics\PropertyComparer.cs" />
+    <Compile Include="_OpenSource\BeTimvwFramework\Collections\Generics\SortableBindingList.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\deafult.licenseheader">
+      <Link>deafult.licenseheader</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Forms\ResetTimelineZoomConfirmationForm.resx">
+      <DependentUpon>ResetTimelineZoomConfirmationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Forms\TimelineThresholdLimitWarningForm.resx">
+      <DependentUpon>TimelineThresholdLimitWarningForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Forms\ResetTraceEventsFilterConfirmationForm.resx">
+      <DependentUpon>ResetTraceEventsFilterConfirmationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Forms\ResultPresenterAboutControl.resx">
+      <DependentUpon>ResultPresenterAboutControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Forms\CustomErrorControl.resx">
+      <DependentUpon>CustomErrorControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Forms\ResultPresenterAnalyzerResultTimelineControl.resx">
+      <DependentUpon>ResultPresenterAnalyzerResultTimelineControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Forms\ResultPresenterExecutionInfoControl.resx">
+      <DependentUpon>ResultPresenterExecutionInfoControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Forms\ResultPresenterAnalyzerResultMdxQueryTreeControl.resx">
+      <DependentUpon>ResultPresenterAnalyzerResultMdxQueryTreeControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Forms\ResultPresenterAnalyzerResultDataRetrieveControl.resx">
+      <DependentUpon>ResultPresenterAnalyzerResultDataRetrieveControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Forms\ResultPresenterAnalyzerResultEngineUsageControl.resx">
+      <DependentUpon>ResultPresenterAnalyzerResultEngineUsageControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Forms\ResultPresenterAnalyzerResultControl.resx">
+      <DependentUpon>ResultPresenterAnalyzerResultControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Forms\ResultPresenterAnalyzerResultPerformanceCounterControl.resx">
+      <DependentUpon>ResultPresenterAnalyzerResultPerformanceCounterControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Forms\ResultPresenterAnalyzerResultResourceUsageControl.resx">
+      <DependentUpon>ResultPresenterAnalyzerResultResourceUsageControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Forms\ResultPresenterControl.resx">
+      <DependentUpon>ResultPresenterControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Forms\ResultPresenterExecutionProgressControl.resx">
+      <DependentUpon>ResultPresenterExecutionProgressControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Forms\ResultPresenterQueryResultControl.resx">
+      <DependentUpon>ResultPresenterQueryResultControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Forms\ResultPresenterTraceEventsControl.resx">
+      <DependentUpon>ResultPresenterTraceEventsControl.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\SSASQueryAnalyzer.snk">
+      <Link>SSASQueryAnalyzer.snk</Link>
+    </None>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\BatchMode_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\LiveMode_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\LoadFromDB_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Profiler_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\ProfilerFiltered_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\TimelineZoomed_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\ASQA_ExecutionProgress_100ms.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\LinkedIn_Logo_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\GitHub_Logo_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Blog_Logo_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Twitter_Logo_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\HomePage_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\SoftwareLicense_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\ASQA_Logo_545x478.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\e-mail_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\SSAS_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\ASQAAssemblyConfig_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Cache_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\PerformanceCounter_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\CubeMetadata_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\MDXScriptFile_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\MsmdsrvIniFile_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Timeline_Threshold_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\ASQA_Logo_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\ZoomMode_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\ASQA_Logo_545x545_transparent.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

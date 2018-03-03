@@ -282,7 +282,7 @@ namespace SSASQueryAnalyzer.Client.SSMS.VSPackage.Windows.Forms
                 case "[Warm Cache Execution] - Title back color":
                     associatedProperty = "WarmCacheColor";
                     break;
-                case "Highligth color":
+                case "Highlight color":
                     associatedProperty = "HighlightColor";
                     break;
                 #endregion

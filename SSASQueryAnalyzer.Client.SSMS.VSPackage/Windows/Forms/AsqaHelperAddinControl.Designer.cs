@@ -349,7 +349,7 @@
             this.comboBoxGlobalProperties.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxGlobalProperties.FormattingEnabled = true;
             this.comboBoxGlobalProperties.Items.AddRange(new object[] {
-            "Highligth color",
+            "Highlight color",
             "[Cold Cache Execution] - Graph bar color 1",
             "[Cold Cache Execution] - Graph bar color 2",
             "[Cold Cache Execution] - Title back color",
